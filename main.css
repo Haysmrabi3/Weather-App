@@ -1,0 +1,467 @@
+:root {
+    --main-color : #1e202b ; 
+    --second-color : #323544 ;
+    --hover : #009ad8 ;
+}
+
+
+
+
+
+/* Global css   */
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+ul{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 60%;
+    margin-inline: auto;
+}
+
+@media screen and (max-width:1900px) {
+    .container {
+        width: 75%;
+    }
+}
+
+/* Global css   */
+
+
+
+/* start nav-bar  */
+
+nav {
+    background-color: var(--main-color);
+    position: relative;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 35px;
+}
+
+nav .container .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav .container .logo img {
+    overflow:content-box ;
+    height: 40px;
+}
+
+nav .container .logo .logo-title h1 {
+    color: white;
+    font-size: 20px;
+}
+
+nav .container .logo .logo-title small {
+    color: #bfc1c8;
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+nav .container ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav .container li a {
+    color: white;
+    padding: 5px  13px;
+    border: 2px solid transparent;
+    border-radius: 100vh 100vh;
+    transition: all 0.3s;
+}
+
+nav .container ul li a:hover {
+    border-color: var(--hover);
+    color: var(--hover);
+}
+
+nav .container ul li .active {
+    border-color: var(--hover);
+    color: var(--hover);
+}
+
+nav .container .List label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 20px;
+    display: none;
+}
+
+nav .container .List {
+    margin-left: auto;
+}
+
+:has(#list:checked){
+    nav .container .nav-links {
+        display: block;
+
+    }
+}
+
+
+
+
+@media screen and (max-width:991px) {
+    nav {
+        padding-block: 20px;
+    }
+    nav .container {
+        display: block;
+        padding: 0;
+    }
+
+    nav .container .nav-links {
+        background-color: var(--main-color);
+        padding-block: 30px;
+        width: 100%;
+        display: none;
+    }
+
+    nav .container .nav-links ul{
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--second-color);
+        width: 95%;
+        margin: auto;
+        border-radius: 15px;
+    }
+    nav .container .nav-links ul:first-child {
+        padding-top: 20px;
+    }
+    nav .container .nav-links ul:last-child {
+        padding-bottom: 20px;
+    }
+
+    nav .container ul li  {
+        background-color: var(--second-color);
+        width: 200px;
+        text-align: center;
+    }
+    nav .container .List label {
+        display: inline-block;
+    }
+
+}
+
+
+
+
+/* end nav-bar  */
+
+
+
+
+
+
+/* start Header  */
+
+.header {
+    background-image: url('imges/banner.png');
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.header .container {
+    margin-top: 70px;
+    position: relative;
+}
+
+.header #searsh {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    color: white;
+    padding-left: 8px;
+    transition: all 0s;
+}
+.header #searsh:focus-visible {
+    outline: none;
+    box-shadow : 0 0 4px 4px var(--hover) ;
+}
+
+.header #find {
+    background-color: var(--hover);
+    border: none;
+    color: white;
+    width: 100px;
+    height:100%;
+    border-radius: 50px;
+    position: absolute;
+    right:0 ;
+    top: 0;
+}
+
+/* end Header  */
+
+
+
+
+
+/* ///////////////////////////////// start content ///////////////////////////////// */
+
+/* first-day start */
+#content {
+    background-color: var(--main-color);
+}
+
+#content .container {
+min-height: 350px;
+padding-bottom: 40PX;
+background-color: transparent;
+}
+
+#content .container .first-day , .second-day , .third-day {
+    float: left;
+    width: calc(100% / 3 ) !important; 
+    min-height: 340px;
+    margin-top: -150px;
+}
+
+.clear {
+    clear: both;
+}
+
+#content .container .first-day {
+    background-color: var(--second-color);
+    color: #bfc1c8;
+    border-radius: 8px 0px 0px 8px;
+}
+
+#content .container .first-day .date1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#content .container .first-day .first-content {
+    padding: 20px 15px 0px 15px;
+}
+
+#content .container .first-day .Degree1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 50px;
+}
+
+#content .container .first-day .Degree1 img {
+    height: 80px;
+    width: 80px;
+    margin-right: 50px;
+}
+
+#content .container .first-day .Degree1 .num1 {
+    font-size: 60px;
+    color: white;
+    font-weight: 400;
+}
+
+#content .container .first-day span {
+    color: var(--hover);
+    font-size: 18px;
+}
+
+#content .container .first-day ul {
+    margin-block: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+#content .container .first-day ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (max-width:991px) {
+    #content .container .first-day , .second-day , .third-day {
+        width: 100% !important; 
+    }
+    .second-day {
+        margin-top: 0px;
+    }
+    .third-day {
+        margin-top: 0px;
+    }
+
+    
+}
+
+/* first-day end */
+
+
+
+/* second-day start */
+
+.second-day {
+    text-align: center;
+    background-color: #262936;
+}
+
+.second-day .Date2 {
+padding: 15px;
+background-color: #222531;
+color: #bfc1c8;
+}
+
+.second-day .second-content {
+    background-color: #262936;
+    padding-top: 40px;
+}
+
+.second-day .Degree2 .num2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+.second-day .Degree2 small {
+display: block;
+color: #bfc1c8;
+margin: 4px 0px 20px 0px;
+}
+
+.second-day span {
+    color: var(--hover);
+    font-size: 18px;
+}
+
+/* second-day end */
+
+
+
+
+
+/* third-day start */
+.third-day {
+    text-align: center;
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--second-color);
+}
+
+.third-day .Date3 {
+    color: #bfc1c8;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.third-day .third-content {
+    height: 100%;
+    padding-top: 40px;
+}
+
+.third-day .Degree3 .num3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+.third-day .third-content  small {
+display: block;
+color: #bfc1c8;
+margin: 4px 0px 20px 0px;
+}
+
+.third-day span {
+    color: var(--hover);
+    font-size: 18px;
+}
+
+/* third-day end */
+
+/* ///////////////////////////////// end content ///////////////////////////////// */
+
+
+
+
+/* footer start  */
+
+footer {
+    background-color: var(--second-color);
+    padding-block: 40px;
+}
+
+footer .container .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .search {
+    position: relative;
+    width: 700px;
+}
+
+footer #footer-search {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    color: white;
+    padding-left: 8px;
+    transition: all 0s;
+}
+
+footer #footer-search:focus-visible {
+    outline: none;
+    box-shadow : 0 0 4px 4px var(--hover) ;
+}
+
+footer #footer-btn {
+    background-color: var(--hover);
+    border: none;
+    color: white;
+    width: 100px;
+    height:100%;
+    border-radius: 50px;
+    position: absolute;
+    right:0 ;
+    top: 0;
+}
+
+footer .social i {
+    margin: 5px;
+    padding: 12px;
+    font-size: 20px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: var(--hover);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+footer .social i:hover {
+    color: white;
+    background-color: var(--hover);
+}
+
+footer p {
+    text-align: center;
+    margin-top: 30px;
+    color: #bfc1c8;
+}
+
+/* footer end  */
